@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class ='col-lg-8'>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Jitata Online Shop</div>
+  <div class="panel-body">
+    <button type="button" class="navbar-toggle"
+  data-toggle="collapse" data-target=".navbar-collapse">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  </button>
+<a class="navbar-brand" href="/products"> Add Item</a>
+</div>
+    <p>...</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+   <tr><td>Title</td> <td>Description </td> <td> Price</td> </tr>
+  {% for i in table %}
+    <tr><td>{{ i.title }}</td>
+        <td>{{ i.description }}</td>
+      <td> {{ i.price }}
+    {% endfor %}
+  </tr>
+</table>
+</div>
+{% endblock %}
