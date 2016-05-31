@@ -7,7 +7,10 @@ from forms import LoginForm, ProductsForm
 import models
 from models import db
 from models import Products
+# from app import create_app
 
+# app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+# create_app = create_app()
 
 app= Flask(__name__)
 app.config['SECRET_KEY'] = 'hard to guess string'
