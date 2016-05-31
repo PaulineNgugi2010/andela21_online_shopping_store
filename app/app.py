@@ -39,7 +39,8 @@ def products():
 			price=form.price.data)
 		db.session.add(products)
 		db.session.commit()
-		return redirect(url_for('products'))
+		#return redirect(url_for('products'))
+		return render_template('displayproducts.html', products=products, table=products)
 
 
 
